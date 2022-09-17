@@ -23,14 +23,14 @@ let countryItem = [{
 input.addEventListener('input', onSearch);
 
 function onSearch(event) {
-   
-    event.preventDefault();
-      const {
-    elements: {name, flags, capital, population, languages },
-  } = event.currentTarget;
+    fetchCountries(event.target.value);
+//     event.preventDefault();
+//       const {
+//     elements: {name, flags, capital, population, languages },
+//   } = event.currentTarget;
   
-    let search = name.value;
-    fetchCountries.fetchCountries(search).then(renderCountry).catch(onFetchError);
+//     let search = name.value;
+//     fetchCountries.fetchCountries(search).then(renderCountry).catch(onFetchError);
 }
 
 function renderCountry(countryItem) {
