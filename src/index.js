@@ -50,6 +50,6 @@ function renderCountry(countryItem) {
     const createCountryItem = renderCountry(countryItem);
 countryList.insertAdjacentHTML('afterbegin', createCountryItem);
 
-function onFetchError() {
-    Notiflix.failure("Too many matches found. Please enter a more specific name.");
-}
+// function onFetchError() {
+//     Notiflix.failure("Too many matches found. Please enter a more specific name.");
+// }
