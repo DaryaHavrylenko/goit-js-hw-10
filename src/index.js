@@ -24,7 +24,7 @@ input.addEventListener('input', onSearch);
 
 function onSearch(event) {
     fetchCountries(event.target.value);
-//     event.preventDefault();
+    // event.preventDefault();
 //       const {
 //     elements: {name, flags, capital, population, languages },
 //   } = event.currentTarget;
@@ -52,3 +52,5 @@ countryList.insertAdjacentHTML('afterbegin', createCountryItem);
 function onFetchError() {
     Notiflix.failure("Too many matches found. Please enter a more specific name.");
 }
+
+export { onSearch }
