@@ -24,14 +24,13 @@ input.addEventListener('input', onSearch);
 
 function onSearch(event) {
    
-    fetchCountries(event.target.value);
-    // event.preventDefault();
-//       const {
-//     elements: {name, flags, capital, population, languages },
-//   } = event.currentTarget;
+    event.preventDefault();
+      const {
+    elements: {name, flags, capital, population, languages },
+  } = event.currentTarget;
   
-//     let search = name.value;
-//     fetchCountries.fetchCountries(search).then(renderCountry).catch(onFetchError);
+    let search = name.value;
+    fetchCountries.fetchCountries(search).then(renderCountry).catch(onFetchError);
 }
 
 function renderCountry(countryItem) {
@@ -50,6 +49,6 @@ function renderCountry(countryItem) {
     const createCountryItem = renderCountry(countryItem);
 countryList.insertAdjacentHTML('afterbegin', createCountryItem);
 
-// function onFetchError() {
-//     Notiflix.failure("Too many matches found. Please enter a more specific name.");
-// }
+function onFetchError() {
+    Notiflix.failure("Too many matches found. Please enter a more specific name.");
+}
